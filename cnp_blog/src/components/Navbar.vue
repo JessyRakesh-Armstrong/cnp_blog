@@ -1,13 +1,23 @@
 <template>
-    <Menubar :model="items"/>
+    <div class="flexbox">
+        <Image :src="require('../assets/CNP_logo.png')" alt="Image" width="250" />
+    </div>
+        <Menubar :model="items"/>
 </template>
+<style scoped>
+.flexbox {
+    display: flex;
+}
+</style>
 
 <script>
+import Image from 'primevue/image';
 import Menubar from 'primevue/menubar';
 export default {
   name: 'nav-bar',
   components: {
     Menubar,
+    Image
   },
   data() {
     return {
