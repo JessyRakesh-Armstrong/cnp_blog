@@ -1,21 +1,21 @@
 <template>
-  <Navbar/>
-  <LandingPage msg="Welcome to Coffee 'N Potions"/>
+  <Navbar />
+  <main>
+    <RouterView/>
+  </main>
 </template>
 
 <script>
-import LandingPage from './Pages/LandingPage.vue'
 import Navbar from './components/Navbar.vue'
+
 
 export default {
   name: 'App',
   components: {
-    LandingPage,
-    Navbar
+    Navbar,
   },
-  data(){
+  data() {
     return {
-      items: ["Home", "About", "Projects"]
     }
   },
 }

@@ -1,8 +1,8 @@
 <template>
-    <div class="landing-page">
-      <h1>Coffee 'N Potions</h1>
+    <div class="about-us">
+      <h1>About Us</h1>
       <p>
-        Welcome to the Coffee N' Potions Online Space 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rem earum aliquam fugiat perferendis dolor, esse eligendi rerum similique! Ducimus consequatur exercitationem numquam incidunt aut labore perferendis quos. Ad, et.
       </p>
     </div>
   </template>
@@ -11,12 +11,10 @@
     // import Button from 'primevue/button';
 
   export default {
-    name: 'LandingPage',
+    name: 'AboutUs',
     props: {
-      msg: String
     },
     components: {
-        // Button
     }
   }
   </script>
