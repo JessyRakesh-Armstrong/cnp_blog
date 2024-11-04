@@ -8,8 +8,9 @@ import router from './router'
 createApp(App)
 .use(router) // vue-router
 .use(PrimeVue, { // PrimeVue
+    ripple: true,
     theme: {
         preset: Aura
-    }
+    },
 })
 .mount('#app')

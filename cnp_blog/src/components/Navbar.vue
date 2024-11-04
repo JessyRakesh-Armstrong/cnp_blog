@@ -9,8 +9,15 @@
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
             </router-link>
-            <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
-                <span v-if="hasSubmenu" class="pi pi-fw pi-angle-down ml-2" />
+
+            <a v-else v-ripple :href="item.url" :to="item.route" v-bind="props.action" @click="navigate">
+
+            <router-link v-if="item.route" :to="item.route">
+                <span :class="item.icon" />
+                <span>{{ item.label }}</span>
+                <span v-if="hasSubmenu" class="pi pi-fw pi-angle-down" />
+
+            </router-link>
             </a>
         </template>
     </Menubar>
@@ -39,68 +46,36 @@ export default {
                     label: 'Home',
                     icon: 'pi pi-link',
                     route: '/',
-                    command: () => {
-                      console.log(window.location.href)
-                      this.$router.push({path: "/"});
-                    }
                 },
                 {
                     label: 'About Us',
                     icon: 'pi pi-home',
                     route: '/about-us',
-                    command: () => {
-                      this.$router.push({path: '/about-us'});
-                    }
-                }
-            ],
-            itemstest: [
-                {
-                    label: 'Home',
-                    icon: 'pi pi-home',
-                    route: '/',
-                    command: () => {
-                        // this.goToPage('/');
-                        // useRoute('/')
-                    },
-                },
-
-                {
-                    label: 'About Us',
-                    icon: 'pi pi-info-circle',
-                    route: '/about',
-                    command: () => {
-                        console.log("hit")
-                        this.$router.push('/about/')
-                    },
+                  
                 },
                 {
                     label: 'Projects',
-                    icon: 'pi pi-shopping-cart',
+                    icon: 'pi pi-search pi-angle-down',
+                    route: '/projects',
                     items: [
                         {
-                            label: 'New',
+                            label: 'Basketball Choose Your Own Adventure',
                             icon: 'pi pi-fw pi-plus',
-                            command: () => {
-                                // this.goToPage('/products/new');
-                            }
+                            route: '/projects/basketball-mafia',
                         },
                         {
-                            label: 'List',
+                            label: 'UC Basic Needs Student Dashboard',
                             icon: 'pi pi-fw pi-list',
-                            command: () => {
-                                // this.goToPage('/products');
-                            }
+                            route: '/projects/ucbn',
+                        },
+                        {
+                            label: 'Coffee Companion',
+                            icon: 'pi pi-fw pi-list',
+                            route: '/projects/coffee-companion',
                         }
                     ]
                 },
-                {
-                    label: 'Contact',
-                    icon: 'pi pi-envelope',
-                    command: () => {
-                        // this.goToPage('/contact');
-                    },
-                }
-            ]
+            ],
         }
     }
 }

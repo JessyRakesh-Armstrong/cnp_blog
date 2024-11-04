@@ -5,10 +5,13 @@
         Welcome to the Coffee N' Potions Online Space 
       </p>
     </div>
+    <div>
+      <Image :src="require('../assets/images/Subject.png')" alt="Image" width="250" />
+    </div>
   </template>
   
   <script>
-    // import Button from 'primevue/button';
+    import Image from 'primevue/image';
 
   export default {
     name: 'LandingPage',
@@ -17,6 +20,7 @@
     },
     components: {
         // Button
+      Image,
     }
   }
   </script>
