@@ -2,7 +2,7 @@
     <div class="flexbox">
         <Image :src="require('../assets/CNP_logo.png')" alt="Image" width="250" />
     </div>
-    <Menubar :model="items">
+    <Menubar :model="itemsLeft">
         <template #item="{ item, props, hasSubmenu }">
             <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
                 <a v-ripple :href="href" v-bind="props.action" @click="navigate">
@@ -20,6 +20,12 @@
             </router-link>
             </a>
         </template>
+				<template #end>
+					<div class="flex items-center gap-2">
+							<InputText placeholder="Search" type="text" class="w-32 sm:w-auto" />
+							<Avatar image="/images/avatar/amyelsner.png" shape="circle" />
+					</div>
+				</template>
     </Menubar>
 </template>
 <style scoped>
@@ -41,7 +47,7 @@ export default {
     data() {
         return {
             CNPLOGO: '../assets/CNP_logo.png',
-            items: [
+            itemsLeft: [
                 {
                     label: 'Home',
                     icon: 'pi pi-link',

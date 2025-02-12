@@ -2,19 +2,22 @@
     <div class="about-us">
       <h1>About Us</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rem earum aliquam fugiat perferendis dolor, esse eligendi rerum similique! Ducimus consequatur exercitationem numquam incidunt aut labore perferendis quos. Ad, et.
+This online space is one curated by me...Jessy. Welcome to the things I like to type up. It will be a compilation of all of my connections to the world outside of the bay area. 
       </p>
     </div>
+
   </template>
   
   <script>
     // import Button from 'primevue/button';
+    // import Timeline from '../components/Timeline.vue'
 
   export default {
     name: 'AboutUs',
     props: {
     },
     components: {
+      // Timeline
     }
   }
   </script>

@@ -4,6 +4,9 @@
       <p>
         Welcome to the Coffee N' Potions Online Space 
       </p>
+      <p>
+Coffee N Potions is an optimistic expression. A revelation that moments that move us forward comes from the most unexpected places. That the helping hand you give, is your biggest achievement to date....(It's just a blog)
+      </p>
     </div>
     <div>
       <Image :src="require('../assets/images/Subject.png')" alt="Image" width="250" />
